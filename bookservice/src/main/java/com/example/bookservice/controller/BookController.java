@@ -1,6 +1,7 @@
 package com.example.bookservice.controller;
 
 import com.example.bookservice.entities.Book;
+import com.example.bookservice.service.dto.requests.AddBookRequest;
 import com.example.bookservice.service.dto.response.FindBookByIdResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -18,8 +19,8 @@ public class BookController {
         return bookService.findAll();
     }
     @PostMapping("/add")
-    public Book addBook(@RequestBody Book book) {
-        return bookService.save(book);
+    public Book addBook(@RequestBody AddBookRequest addBookRequest) {
+        return bookService.save(addBookRequest);
     }
     @DeleteMapping("/deleteById/{id}")
     public void deleteById(@PathVariable int id) {

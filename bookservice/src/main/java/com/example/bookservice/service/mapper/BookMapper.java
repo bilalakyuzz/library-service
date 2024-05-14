@@ -1,6 +1,7 @@
 package com.example.bookservice.service.mapper;
 
 import com.example.bookservice.entities.Book;
+import com.example.bookservice.service.dto.requests.AddBookRequest;
 import com.example.bookservice.service.dto.response.FindBookByIdResponse;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
@@ -11,6 +12,8 @@ public interface BookMapper {
     BookMapper INSTANCE= Mappers.getMapper(BookMapper.class);
     @Mapping(target = "genre",source = "genre.name")
     FindBookByIdResponse getBookResponseFromBook(Book book);
+
+    Book getBookFromAddRequest(AddBookRequest addBookRequest);
 
 
 }

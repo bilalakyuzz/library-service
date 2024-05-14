@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="library_core" />
         <module name="discoveryserver" />
       </profile>
-      <profile name="Annotation profile for userservice" enabled="true">
+      <profile name="Annotation profile for bookservice" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -19,6 +20,7 @@
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
         </processorPath>
+        <module name="authservice" />
         <module name="bookservice" />
         <module name="userservice" />
       </profile>
@@ -29,9 +31,11 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="authservice" options="-parameters" />
       <module name="bookservice" options="-parameters" />
       <module name="demo" options="-parameters" />
       <module name="discoveryserver" options="-parameters" />
+      <module name="library_core" options="-parameters" />
       <module name="userservice" options="-parameters" />
     </option>
   </component>
