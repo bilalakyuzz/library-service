@@ -10,7 +10,7 @@
         <module name="library_core" />
         <module name="discoveryserver" />
       </profile>
-      <profile name="Annotation profile for bookservice" enabled="true">
+      <profile name="Annotation profile for userservice" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />

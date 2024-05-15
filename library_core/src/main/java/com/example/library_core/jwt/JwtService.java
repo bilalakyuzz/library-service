@@ -16,7 +16,7 @@ import java.util.Map;
 @Service
 public class JwtService {
     private long EXPIRATION = 6000000;
-    private String SECRET_KEY = "3054b42d401b94c2e7129cf821ac34e6b03a09cd47bb24eae6552ac1096d9c014a58ece6b50d09529f8f896c4c842c0bbee7cd82b18d29ebb9e5aa06b1cd0d59";
+    private String SECRET_KEY = "d174e86b76f9324adbe2d40a11d054ecbc07e4b924d257890da6e7631831d2c15a0cbb8bff3c64aa1c7c5e8bfe7641f86d50ef4b15c7a7c6bd20e9f5f97c3203";
 
     public String generateToken(String username, List<String> roles) {
         Map<String, Object> claims = new HashMap<>();
