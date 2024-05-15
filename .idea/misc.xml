@@ -8,6 +8,8 @@
         <option value="$PROJECT_DIR$/bookservice/pom.xml" />
         <option value="$PROJECT_DIR$/discoveryserver/pom.xml" />
         <option value="$PROJECT_DIR$/userservice/pom.xml" />
+        <option value="$PROJECT_DIR$/authservice/pom.xml" />
+        <option value="$PROJECT_DIR$/library_core/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">
@@ -16,7 +18,7 @@
       </set>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_22" default="true" project-jdk-name="openjdk-22" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="corretto-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="ProjectType">

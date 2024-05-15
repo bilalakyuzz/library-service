@@ -4,6 +4,7 @@ import com.example.bookservice.entities.Book;
 import com.example.bookservice.entities.Genre;
 import com.example.bookservice.service.abstracts.BookService;
 import com.example.bookservice.service.abstracts.GenreService;
+import com.example.bookservice.service.dto.requests.AddBookRequest;
 import com.example.bookservice.service.dto.response.FindBookByIdResponse;
 import com.example.bookservice.service.mapper.BookMapper;
 import lombok.RequiredArgsConstructor;
@@ -31,7 +32,10 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
-    public Book save(Book book) {
+    public Book save(AddBookRequest addBookRequest) {
+        Book book=BookMapper.INSTANCE.getBookFromAddRequest(addBookRequest);
+        Genre genre =genreService.findById(addBookRequest.getGenreId());
+        book.setGenre(genre);
         return bookRepository.save(book);
     }
 
