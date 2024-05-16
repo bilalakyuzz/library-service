@@ -8,5 +8,10 @@ import java.util.List;
 
 @Repository
 public interface UserBookRepository extends JpaRepository<UserBook, Integer> {
+
+    List<UserBook> findByUserIdAndIsActiveTrue(int userId);
+
     List<UserBook> findByUserId(int userId);
+
+    UserBook findByUserIdAndBookIdAndIsActiveTrue(int userId, int bookId);
 }

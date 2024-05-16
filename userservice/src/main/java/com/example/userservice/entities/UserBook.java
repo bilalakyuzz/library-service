@@ -3,6 +3,7 @@ package com.example.userservice.entities;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.ColumnDefault;
 
 @Entity
 @Table(name = "user_books")
@@ -17,4 +18,7 @@ public class UserBook {
     private int userId;
     @Column(name = "book_id")
     private int bookId;
+
+    @Column(name = "is_active")
+    private boolean isActive;
 }
