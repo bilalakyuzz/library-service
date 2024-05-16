@@ -1,6 +1,5 @@
 package com.example.userservice.controller;
 
-import com.example.userservice.entities.UserBook;
 import com.example.userservice.service.abstracts.UserBookService;
 import com.example.userservice.service.dto.request.AddBookToUserRequest;
 import com.example.userservice.service.dto.request.ReturnBookRequest;

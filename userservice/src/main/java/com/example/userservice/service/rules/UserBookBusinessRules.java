@@ -28,6 +28,8 @@ public class UserBookBusinessRules {
         bookServiceClient.findById(bookId);
         userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
     }
+
+
     public void checkUserExistsAndBookBorrowed(int userId,List<UserBook> books,int returnBookId){
         userRepository.findById(userId).orElseThrow(() -> new RuntimeException("User not found"));
         boolean bookExists = false;
